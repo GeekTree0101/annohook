@@ -1,0 +1,29 @@
+
+name: 'annohook'
+description: 'Source code annotations parsing and slack hook delivery'
+author: '@Geektree0101'
+
+inputs:
+  PROJECT_BASE_DIR:
+    description: 'project base dir (ex: ./Project)'
+    required: true
+  SOURCE_FILE_TYPE:
+    descrpition: 'source file type (ex: swift)'
+    required: true
+  SLACK_HOOK_URL: 
+    description: 'slack incoming webhook url'
+    required: true
+  SLACK_HOOK_NAME:
+    description: 'slack incoming custom name'
+    required: false
+  SLACK_HOOK_IMAGE:
+    description: 'slack incoming custom icon'
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'book-open'
+  color: 'orange'
